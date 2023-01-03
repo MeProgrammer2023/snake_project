@@ -5,7 +5,15 @@
 using namespace std;
 
 
+class Scoreboard{
 
+    private:
+
+    public:
+
+
+    
+};
 
 
 
