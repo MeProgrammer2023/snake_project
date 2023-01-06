@@ -9,21 +9,21 @@ using namespace std;
 
 
 
-
-
 class Player
 {
 
     private:
        string name;
        int bestscore;
-       char dir;
        int x_pos,y_pos;
 
     public:
+        char dir;
         string getname();
+		string get_player_pattern(char board[][9]);
         void input();
-        void move(char dir);
+		
+        // void move(char dir);
 
 
 };
@@ -35,47 +35,32 @@ cin>>name;
 return name;
 }
 
+
+
+
+
 void Player::input(){
-if (_kbhit())
+char c = _getch();
 	{
-	switch (_getch())
+	switch (c)
 	{
 	case 'a':
-		dir = 'L';
+		dir = 'l';
 		break;
 	case 'd':
-		dir = 'R';
+		dir = 'r';
 		break;
 	case 'w':
-		dir = 'U';
+		dir = 'u';
 		break;
 	case 's':
-		dir = 'D';
+		dir = 'd';
 		break;
 		}
 	}
 }
 
-void Player::move(char dir){
 
-switch (dir)
-{
-case 'L':
-    x_pos--;
-    break;
-case 'R':
-    x_pos++;
-    break;
-case 'U':
-    y_pos++;
-    break;
-case 'D':
-    y_pos--;
-    break;
-default:
-    break;
-}
-}
 
 
 

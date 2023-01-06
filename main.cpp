@@ -17,13 +17,13 @@ int main(){
 
 srand(time(NULL));
 
+
 Level lvl;
 
-// Snake snake;
+
+
+
 
 
 
 }
-
-
-

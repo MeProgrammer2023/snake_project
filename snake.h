@@ -28,7 +28,7 @@ class Snake
     public:
         char dir;
         void random_dir();
-        void get_snake_pattern(char board[][9]);
+        
 
 
 
@@ -80,26 +80,6 @@ void Snake::random_dir(){
 
 
 
-void Snake::get_snake_pattern(char board[][9]){
-
-string snake_pattern;
-
-for (int i = 0; i < 9; i++)
-{
-    for (int j = 0; j < 9; j++)
-    {
-       if(board[i][j]=='O'){
-           snake_pattern = snake_pattern + to_string(i);
-           snake_pattern = snake_pattern + to_string(j);
-           snake_pattern += '-';
-       }
-    }
-    
-}
-
-cout<<snake_pattern;
-
-}
 
 
 
