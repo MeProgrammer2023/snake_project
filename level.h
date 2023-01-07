@@ -41,7 +41,7 @@ class Level
         void resetlevel();
         void resetgame();
         void completion();
- 
+        void drawboard();
 };
 
 
@@ -283,6 +283,27 @@ for (int i = 0; i < width; i++)
 }
 
 
+void Level::drawboard(){ //draw board for better graphic looks
+
+
+cout<<"___________________"<<endl;
+for (int i = 0; i < width; i++)
+{
+    cout<<"|";
+    for (int j = 0; j < length; j++)
+    {
+        // if(board[i][j]=='O'){cout<<" ";}
+        if(board[i][j] == '\0'){cout<<"_";}
+        cout<<board[i][j]<<"|";
+        
+    }
+    
+    cout<<endl;
+}
+
+}
+
+
 void Level::resetlevel(){//reset vars of level
 
     snake_head_pos_i = 4;
@@ -331,7 +352,8 @@ while(gameon == true){ //game running loop
 makelevel(); //create board of the game
 cout<<"MEMORIZE THE PATTERN"<<endl;
 Sleep(2000);
-
+system("cls"); //system("clear");
+drawboard();
 
 for(int i=0; i<snake_moves; i++){ //show snake pattern
 
@@ -349,7 +371,7 @@ Sleep(1000);
 system("cls"); //system("clear");
 cout<<"YOUR TURN"<<endl;
 makelevel(); //remake the board
-
+drawboard();
 
 for (int i = 0; i<player_moves; i++) //show players board
 {
