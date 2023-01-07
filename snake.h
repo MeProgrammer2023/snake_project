@@ -6,16 +6,10 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <stdlib.h>
-#include <string> 
-//#include "level.h"
+
+
 
 using namespace std;
-
-
-
-
-
 
 
 class Snake
@@ -23,13 +17,11 @@ class Snake
 
     private:
         
-        
 
     public:
         char dir;
         void random_dir();
         
-
 
 
 };
@@ -43,45 +35,23 @@ void Snake::random_dir(){
     switch (random)
     {
     case 1:
-        dir = 'u';
+        dir = 'u';//u
         break;
     case 2:
-        dir = 'd';
+        dir = 'd';//d
         break;
     case 3:
-        dir = 'l';
+        dir = 'l';//l
         break;
     case 4:
-        dir = 'r';
+        dir = 'r';//r
         break;
     default:
         break;
     }
     
-    // if(temp_dir == 'd' && dir == 'u'){
-    //     Snake::random_dir();
-    // }
-    // else if(temp_dir == 'u' && dir == 'd'){
-    //     Snake::random_dir();
-    // }
-    // else if(temp_dir == 'l' && dir == 'r'){
-    //     Snake::random_dir();
-    // }
-    // else if(temp_dir == 'r' && dir == 'l'){
-    //     Snake::random_dir();
-    // }
-    // else{
-    //     dir = temp_dir;
-    // }
-        
-        
 
 }
-
-
-
-
-
 
 
 

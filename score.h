@@ -10,7 +10,6 @@ using namespace std;
 
 class Score
 {
-
     private:
         string snake_pattern;
         string player_pattern;
@@ -18,15 +17,12 @@ class Score
         
 
 
-
-
     public:
-      
-        void update_player_pattern(int i,int j);
-        void update_snake_pattern(int i, int j);
-        void compare(int sim,int lvl);
-
-
+        void update_player_pattern(int i,int j); //add to player_pattern string based on player input
+        void update_snake_pattern(int i, int j); //add to player_pattern string based on snake movement
+        void compare(int sim,int lvl); //compare player and snake string
+        int get_score(); //returns score 
+        void reset_score(); //reset vars to default
 
 };
 
@@ -49,10 +45,14 @@ snake_pattern = snake_pattern + to_string(j);
 snake_pattern = snake_pattern + "-";
 
 
-
 }
 
 
+int Score::get_score(){
+
+    return score;
+
+}
 
 
 void Score::compare(int sim,int lvl){
@@ -73,11 +73,20 @@ for (int i = 0; i <snake_pattern.size(); i++)
 }
 
 // score = score - 1;
-cout<<"you're score is :"<<score<<"/"<<lvl;
+cout<<"you're score is :"<<score<<"/"<<lvl<<endl;
 
 
 
 
+}
+
+
+void Score::reset_score(){
+
+
+score = 0;
+snake_pattern = "";
+player_pattern = "";
 
 }
 
